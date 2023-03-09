@@ -6,9 +6,8 @@ then
 		exit
 fi
 
-
-
 searchEngine=$1
+searchEngine=${searchEngine,,}
 word=$2
 
 python3 lib/${searchEngine}_webscraping.py ${word}

@@ -16,8 +16,8 @@ keyword=sys.argv[2]
 smtp = smtplib.SMTP('smtp.gmail.com', 587)
 
 msg = MIMEMultipart()
-msg['From'] = 'innerpyg@gmail.com'
-msg['To'] = 'innerpyg@gmail.com'
+msg['From'] = ''
+msg['To'] = ''
 msg['Date'] = formatdate(localtime=True)
 msg['Subject'] = Header(s=datetime.today().strftime("%Y-%m-%d %H:%M:%S") + " " + searchEngine + " " + keyword + " monitoring TOP 20", charset='utf-8')
 body = MIMEText('check your attachment', _charset='utf-8')
@@ -33,7 +33,7 @@ part.add_header('Content-Disposition', 'attachment', filename=('utf-8', '', os.p
 msg.attach(part)
 
 mailServer = smtplib.SMTP_SSL('smtp.gmail.com')
-mailServer.login('innerpyg@gmail.com', "ebefjduaqbkzbvyc")
+mailServer.login('', "")
 
 mailServer.send_message(msg)
 mailServer.quit()
