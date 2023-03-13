@@ -6,5 +6,5 @@ carbon_copy: ''
 
 blind_carbon_copy: ''
 
-password: ''
+password: '' # app password
 

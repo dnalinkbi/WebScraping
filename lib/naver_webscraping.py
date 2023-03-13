@@ -5,12 +5,12 @@ from datetime import datetime
 import os,sys
 
 
-keyword=sys.argv[1]
+query=sys.argv[1]
 
 f = open('naverscraping.txt', 'w', encoding = 'utf-8')
 
 for page in range(1,20,10):
-		raw = requests.get("https://search.naver.com/search.naver?where=news&ie=utf8&sm=nws_hty&query="+str(keyword)+"&start="+str(page), headers={'User-Agent':'Mozilla/5.0'})
+		raw = requests.get("https://search.naver.com/search.naver?where=news&ie=utf8&sm=nws_hty&query="+str(query)+"&start="+str(page), headers={'User-Agent':'Mozilla/5.0'})
 		html = BeautifulSoup(raw.text, "html.parser")
 		articles = html.select("ul.list_news > li")	
 		

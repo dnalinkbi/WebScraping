@@ -16,8 +16,15 @@
 ```
 ./WebScraping.sh searchEngine keyword
 ```
+### searchEngine list
+
+ - naver
+ - googlepaper
+ - google
 
 ### note
 
  - default english
- - Hangul support
+ - query Hangul support
+ - code refactoring required
+
